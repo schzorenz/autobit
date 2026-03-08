@@ -80,11 +80,12 @@ const Navbar = ({ onDropdownChange }: { onDropdownChange?: (active: boolean) => 
               >
                 <Link
                   to={item.href}
-                  className="nav-link-item text-xs font-normal text-foreground rounded px-2 py-1 flex items-center gap-1.5"
+                  className="nav-link-item rounded px-2 py-1 flex items-center gap-1.5"
+                  style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif", fontSize: '12px', fontWeight: 400, letterSpacing: '-0.01em', color: 'rgba(255,255,255,0.85)' }}
                 >
                   {item.label}
                   {item.badge && (
-                    <span className="text-[10px] font-normal text-foreground/40">{item.badge}</span>
+                    <span className="text-[10px] font-normal" style={{ color: 'rgba(255,255,255,0.4)' }}>{item.badge}</span>
                   )}
                 </Link>
               </div>
