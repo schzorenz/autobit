@@ -60,8 +60,7 @@ const navItems = [
   { label: "Projects", href: "/projects", type: "mega" },
   { label: "Team", href: "/team", type: "link" },
   { label: "Contact", href: "/contact", type: "link" },
-  { label: "Platform", href: "/platform", type: "link", badge: "Coming soon" },
-  { label: "Pricing", href: "/pricing", type: "link", badge: "Coming soon" },
+  { label: "Pricing", href: "/pricing", type: "link" },
 ];
 
 export const useNavDropdownActive = () => {
