@@ -1,8 +1,10 @@
 import ScrollReveal from "../ScrollReveal";
 
 const cardElevation: React.CSSProperties = {
-  background: '#161617',
-  boxShadow: '0 2px 8px rgba(0,0,0,0.5), 0 12px 32px rgba(0,0,0,0.4), 0 32px 56px rgba(0,0,0,0.3)',
+  background: '#1c1c1e',
+  border: '1px solid rgba(255,255,255,0.00)',
+  borderTop: '1px solid rgba(255,255,255,0.10)',
+  boxShadow: '0 0 0 1px rgba(255,255,255,0.04), inset 0 1px 0 rgba(255,255,255,0.08)',
   transform: 'translateZ(0)',
   transition: 'all 0.38s cubic-bezier(0.25,0.1,0.25,1)',
 };
@@ -52,8 +54,8 @@ const FeaturedProject = ({ eyebrow, heading, subheading, ctaPrimary, ctaSecondar
         <div
           className="relative mx-auto mt-10 max-w-[900px] min-h-[320px] rounded-lg overflow-hidden group"
           style={cardElevation}
-          onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-5px) translateZ(0)'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.6), 0 20px 48px rgba(0,0,0,0.5), 0 40px 72px rgba(0,0,0,0.35)'; }}
-          onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateZ(0)'; e.currentTarget.style.boxShadow = cardElevation.boxShadow as string; }}
+          onMouseEnter={(e) => { e.currentTarget.style.borderTop = '1px solid rgba(255,255,255,0.18)'; e.currentTarget.style.boxShadow = '0 0 0 1px rgba(255,255,255,0.08), inset 0 1px 0 rgba(255,255,255,0.12)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+          onMouseLeave={(e) => { e.currentTarget.style.borderTop = '1px solid rgba(255,255,255,0.10)'; e.currentTarget.style.boxShadow = cardElevation.boxShadow as string; e.currentTarget.style.transform = 'translateZ(0)'; }}
         >
           {image ? (
             <img
