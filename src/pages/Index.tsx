@@ -47,6 +47,7 @@ const Index = () => {
           ctaPrimary={{ text: "Learn more", href: "/projects#earlynx" }}
           ctaSecondary={{ text: "See all projects →", href: "/projects" }}
           badge="National Winner"
+          image="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80"
         />
         <CaseStudies />
         <ProcessSection />
