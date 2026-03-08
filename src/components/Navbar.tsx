@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { Search, ArrowRight, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import autobitLogo from "@/assets/autobit-logo.png";
+import autobitIcon from "@/assets/autobit-icon.png";
 
 const sfProDisplay = "-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif";
 const sfProText = "-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif";
