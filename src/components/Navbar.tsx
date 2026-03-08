@@ -60,8 +60,7 @@ const navItems = [
   { label: "Projects", href: "/projects", type: "mega" },
   { label: "Team", href: "/team", type: "link" },
   { label: "Contact", href: "/contact", type: "link" },
-  { label: "Platform", href: "/platform", type: "link", badge: "Coming soon" },
-  { label: "Pricing", href: "/pricing", type: "link", badge: "Coming soon" },
+  { label: "Pricing", href: "/pricing", type: "link" },
 ];
 
 export const useNavDropdownActive = () => {
@@ -132,9 +131,6 @@ const Navbar = ({ onDropdownChange }: { onDropdownChange?: (active: boolean) => 
                   style={navItemStyle}
                 >
                   {item.label}
-                  {item.badge && (
-                    <span className="text-[10px] font-normal" style={{ color: 'rgba(255,255,255,0.4)' }}>{item.badge}</span>
-                  )}
                 </Link>
               </div>
             ))}
@@ -283,7 +279,6 @@ const Navbar = ({ onDropdownChange }: { onDropdownChange?: (active: boolean) => 
               style={{ ...dropdownLinkStyle }}
             >
               {item.label}
-              {item.badge && <span className="text-xs font-normal" style={{ color: 'rgba(255,255,255,0.4)' }}>{item.badge}</span>}
             </Link>
           ))}
           <a
