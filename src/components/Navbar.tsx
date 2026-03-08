@@ -99,7 +99,8 @@ const Navbar = ({ onDropdownChange }: { onDropdownChange?: (active: boolean) => 
             </button>
             <a
               href="mailto:autobitofficial.ph@gmail.com"
-              className="flex items-center gap-1.5 text-xs text-foreground hover:text-primary transition-colors"
+              className="flex items-center gap-1.5 hover:text-primary transition-colors"
+              style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif", fontSize: '12px', fontWeight: 400, letterSpacing: '-0.01em', color: 'rgba(255,255,255,0.85)' }}
             >
               Start a project <ArrowRight size={16} />
             </a>
