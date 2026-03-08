@@ -169,9 +169,11 @@ const Navbar = ({ onDropdownChange }: { onDropdownChange?: (active: boolean) => 
         onMouseEnter={() => openDropdown("Projects")}
         onMouseLeave={closeDropdown}
         style={{
+          borderRadius: 0,
+          borderTop: 'none',
           opacity: activeDropdown === "Projects" ? 1 : 0,
-          transform: activeDropdown === "Projects" ? 'translateY(0)' : 'translateY(-6px)',
-          transition: 'opacity 0.28s cubic-bezier(0.4,0,0.2,1), transform 0.28s cubic-bezier(0.4,0,0.2,1)',
+          transform: activeDropdown === "Projects" ? 'translateY(0)' : 'translateY(-10px)',
+          transition: 'opacity 0.38s cubic-bezier(0.25,0.1,0.25,1), transform 0.38s cubic-bezier(0.25,0.1,0.25,1)',
           pointerEvents: activeDropdown === "Projects" ? 'auto' : 'none',
         }}
       >
