@@ -131,9 +131,6 @@ const Navbar = ({ onDropdownChange }: { onDropdownChange?: (active: boolean) => 
                   style={navItemStyle}
                 >
                   {item.label}
-                  {item.badge && (
-                    <span className="text-[10px] font-normal" style={{ color: 'rgba(255,255,255,0.4)' }}>{item.badge}</span>
-                  )}
                 </Link>
               </div>
             ))}
