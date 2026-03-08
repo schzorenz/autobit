@@ -60,7 +60,7 @@ const Navbar = ({ onDropdownChange }: { onDropdownChange?: (active: boolean) => 
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-[1000] nav-blur border-b border-border h-11 flex items-center">
+      <nav className={`fixed top-0 left-0 right-0 z-[1000] nav-blur h-11 flex items-center transition-[border] duration-300 ${isDropdownOpen ? 'border-b border-transparent' : 'border-b border-border'}`}>
         <div className="section-container flex items-center justify-between w-full">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
@@ -117,7 +117,7 @@ const Navbar = ({ onDropdownChange }: { onDropdownChange?: (active: boolean) => 
         style={{
           top: 44,
           opacity: isDropdownOpen ? 1 : 0,
-          transition: 'opacity 0.28s cubic-bezier(0.4,0,0.2,1)',
+          transition: 'opacity 0.38s cubic-bezier(0.25,0.1,0.25,1)',
         }}
       />
 
@@ -127,9 +127,11 @@ const Navbar = ({ onDropdownChange }: { onDropdownChange?: (active: boolean) => 
         onMouseEnter={() => openDropdown("Services")}
         onMouseLeave={closeDropdown}
         style={{
+          borderRadius: 0,
+          borderTop: 'none',
           opacity: activeDropdown === "Services" ? 1 : 0,
-          transform: activeDropdown === "Services" ? 'translateY(0)' : 'translateY(-6px)',
-          transition: 'opacity 0.28s cubic-bezier(0.4,0,0.2,1), transform 0.28s cubic-bezier(0.4,0,0.2,1)',
+          transform: activeDropdown === "Services" ? 'translateY(0)' : 'translateY(-10px)',
+          transition: 'opacity 0.38s cubic-bezier(0.25,0.1,0.25,1), transform 0.38s cubic-bezier(0.25,0.1,0.25,1)',
           pointerEvents: activeDropdown === "Services" ? 'auto' : 'none',
         }}
       >
@@ -167,9 +169,11 @@ const Navbar = ({ onDropdownChange }: { onDropdownChange?: (active: boolean) => 
         onMouseEnter={() => openDropdown("Projects")}
         onMouseLeave={closeDropdown}
         style={{
+          borderRadius: 0,
+          borderTop: 'none',
           opacity: activeDropdown === "Projects" ? 1 : 0,
-          transform: activeDropdown === "Projects" ? 'translateY(0)' : 'translateY(-6px)',
-          transition: 'opacity 0.28s cubic-bezier(0.4,0,0.2,1), transform 0.28s cubic-bezier(0.4,0,0.2,1)',
+          transform: activeDropdown === "Projects" ? 'translateY(0)' : 'translateY(-10px)',
+          transition: 'opacity 0.38s cubic-bezier(0.25,0.1,0.25,1), transform 0.38s cubic-bezier(0.25,0.1,0.25,1)',
           pointerEvents: activeDropdown === "Projects" ? 'auto' : 'none',
         }}
       >
