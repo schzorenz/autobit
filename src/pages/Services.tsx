@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ScrollReveal from "@/components/ScrollReveal";
+import ScrollReveal from "@/components/ScrollReveal";//hfdhfdh
 
 const cardElevation: React.CSSProperties = {
   background: '#1c1c1e',
