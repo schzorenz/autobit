@@ -38,8 +38,9 @@ const HeroSection = () => {
         parallax={0.3}
         noise={0.04}
       />
-      {/* Glass pill badge */}
-      <a
+      <div style={{ position: "relative", zIndex: 1 }}>
+        {/* Glass pill badge */}
+        <a
         href="mailto:autobitofficial.ph@gmail.com"
         style={{
           marginBottom: "24px",
