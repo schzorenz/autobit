@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import ColorBends from "@/components/ColorBends";
 
 const HeroSection = () => {
   const [index, setIndex] = useState(0);
@@ -25,8 +26,21 @@ const HeroSection = () => {
         overflow: "hidden",
       }}
     >
-      {/* Glass pill badge */}
-      <a
+      <ColorBends
+        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", zIndex: 0 }}
+        colors={["#1a1a1a", "#222222", "#0d0d0d"]}
+        speed={0.15}
+        rotation={45}
+        transparent={true}
+        warpStrength={0.8}
+        frequency={0.9}
+        mouseInfluence={0.4}
+        parallax={0.3}
+        noise={0.04}
+      />
+      <div style={{ position: "relative", zIndex: 1 }}>
+        {/* Glass pill badge */}
+        <a
         href="mailto:autobitofficial.ph@gmail.com"
         style={{
           marginBottom: "24px",
@@ -182,6 +196,7 @@ const HeroSection = () => {
       >
         50% deposit to start · Balance on delivery · No retainers
       </p>
+      </div>
     </section>
   );
 };
